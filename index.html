@@ -1,0 +1,2143 @@
+<html lang="fa" dir="rtl" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رزومه — توسعه‌دهنده وردپرس و متخصص سئو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d0d;
+  --dark2: #111318;
+  --card: #16181f;
+  --border: #1e2130;
+  --accent: #6c63ff;
+  --accent2: #00d4aa;
+  --text: #e8eaf0;
+  --muted: #7a7f9a;
+  --tag-bg: #1a1d2e;
+  --accent3:#ffb020;
+  --accent3-soft:rgba(255,176,32,.14);
+  --accent4:#4ea1ff;
+  --accent4-soft:rgba(78,161,255,.14);
+
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;line-height:1.7}
+.container{max-width:1100px;margin:0 auto;padding:0 2rem}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;background:rgba(13,13,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100;padding:.9rem 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-weight:700;font-size:1.1rem;color:var(--accent)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.profile-card,
+.skill-cat,
+.stop,
+.port-card,
+.edu-card {
+  background: rgba(22, 24, 31, 0.55) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+
+body {
+  position: relative;
+  background: transparent;
+}
+
+
+/* HERO — simplified */
+.hero{min-height:100vh;display:flex;align-items:center;padding:6rem 0 4rem;border-bottom:1px solid var(--border)}
+.hero-inner{display:grid;grid-template-columns:1fr 240px;gap:3rem;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.3);color:var(--accent);padding:.35rem .9rem;border-radius:2rem;font-size:.82rem;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.3;margin-bottom:.8rem}
+.hero h1 span{color:var(--accent)}
+.hero-sub{color:var(--muted);font-size:1rem;margin-bottom:1.6rem}
+.bio{color:#b0b4c8;font-size:.95rem;max-width:560px;margin-bottom:2rem;border-right:3px solid var(--accent);padding-right:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.tag{padding:.3rem .75rem;border-radius:2rem;font-size:.78rem;background:var(--tag-bg);border:1px solid var(--border);color:var(--muted)}
+.tag.lang{border-color:rgba(108,99,255,.4);color:#a09cf7}
+.tag.tool{border-color:rgba(0,212,170,.3);color:#00d4aa}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{padding:.7rem 1.6rem;border-radius:.5rem;font-size:.9rem;text-decoration:none;font-weight:600;transition:all .2s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#5a52e0}
+.btn-outline{border:1px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* HERO */
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 280px;  
+  gap:3rem;
+  align-items:center;
+}
+
+/* PROFILE CARD */
+/* HERO */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* PROFILE CARD — نهایی و بدون تداخل */
+.profile-card {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,.5), 0 2px 8px rgba(108,99,255,.15), inset 0 1px 0 rgba(255,255,255,.06);
+  transform: perspective(800px) rotateY(-4deg) rotateX(2deg);
+  transition: transform .3s ease, box-shadow .3s ease;
+  overflow: hidden;
+}
+.profile-card:hover {
+  transform: perspective(800px) rotateY(0deg) rotateX(0deg) translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.6), 0 4px 16px rgba(108,99,255,.25), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* جزئیات داخلی */
+.avatar {
+  font-size: 2.4rem;
+  margin-bottom: .4rem;
+  line-height: 1;
+}
+.hero-name {
+  font-weight: 100;
+  font-size: 1rem;     
+  margin-bottom: .1rem;
+  color: var(--text);
+}
+.profile-name {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: .1rem;
+}
+.profile-role {
+  font-size: 0.6rem;
+  color: var(--accent2);
+  margin-bottom: .7rem;
+  letter-spacing: .02em;
+}
+
+.hero-info-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .3rem .1rem;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.info-item:last-child { border-bottom: none; }
+.info-icon {
+  font-size: .65rem;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: .6rem;
+  color: var(--muted);
+  flex-shrink: 0;
+  min-width: 38px;
+}
+.info-value {
+  font-size: .6rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-right: auto;
+  text-align: left;
+  max-width: 110px;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.avail {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .7rem;
+  font-size: .62rem;
+  color: var(--accent2);
+}
+.avail-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--accent2);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; }
+  50% { opacity: .4; }
+}
+
+.skill-cat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .5s;
+  box-shadow: 0 4px 20px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.skill-cat.show {
+  opacity: 1;
+  transform: none;
+}
+
+.skill-cat:hover {
+  transform: translateY(-3px) scale(1.01);
+  border-color: rgba(108,99,255,.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,.5), 0 0 0 1px rgba(108,99,255,.1);
+}
+
+
+.stop {
+  box-shadow: 0 4px 20px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+
+/* SECTION */
+.section{padding:6rem 0}
+.sec-title{text-align:center;margin-bottom:4rem}
+.sec-tag{display:inline-block;background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.3);color:var(--accent);padding:.3rem .9rem;border-radius:2rem;font-size:.8rem;margin-bottom:.8rem}
+.sec-title h2{font-size:2rem;font-weight:800;margin-bottom:.5rem}
+.sec-title p{color:var(--muted);font-size:.95rem}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.skill-cat{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.5rem;opacity:0;transform:translateY(20px);transition:all .5s}
+.skill-cat.show{opacity:1;transform:none}
+.skill-cat-title{display:flex;align-items:center;gap:.6rem;font-weight:700;margin-bottom:1.2rem;font-size:.95rem}
+.skill-item{margin-bottom:.9rem}
+.skill-label{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);margin-bottom:.35rem}
+.sbar{background:var(--border);border-radius:2rem;height:5px;overflow:hidden}
+.sbar-fill{height:100%;border-radius:2rem;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;transition:width 1s ease}
+
+/* JOURNEY — S-curve */
+.journey-section{padding:6rem 0;background:var(--dark2)}
+#journeyWrapper{position:relative;width:100%}
+.journey-svg{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+#jBg{fill:none;stroke:var(--border);stroke-width:2;stroke-dasharray:8 6}
+#jFill{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-dasharray:0;stroke-dashoffset:0;filter:drop-shadow(0 0 6px var(--accent));transition:stroke-dashoffset .6s ease}
+.stops-list{display:flex;flex-direction:column;gap:0}
+.stop-spacer{display:flex;align-items:flex-start;gap:0;min-height:340px;position:relative}
+.stop-spacer:nth-child(odd){flex-direction:row;padding-right:52%}
+.stop-spacer:nth-child(even){flex-direction:row-reverse;padding-left:52%}
+.stop-dot-wrap{position:absolute;top:2.5rem;left:50%;transform:translateX(-50%);z-index:2}
+.stop-dot{width:16px;height:16px;border-radius:50%;background:var(--border);border:2px solid var(--muted);transition:all .4s}
+.stop-dot.lit{background:var(--accent);border-color:var(--accent);box-shadow:0 0 12px var(--accent)}
+.stop{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.8rem;width:100%;opacity:0;transform:translateY(24px);transition:all .5s}
+.stop.show{opacity:1;transform:none}
+.stop-year{font-size:.78rem;color:var(--accent);font-weight:700;margin-bottom:.4rem}
+.stop h3{font-size:1.05rem;font-weight:700;margin-bottom:.3rem}
+.stop-role{font-size:.82rem;color:var(--accent2);margin-bottom:.8rem}
+.stop p{font-size:.88rem;color:#b0b4c8;margin-bottom:.8rem}
+.stop ul{padding-right:1.2rem;font-size:.85rem;color:#b0b4c8}
+.stop ul li{margin-bottom:.4rem}
+.stop-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.stop-tag{font-size:.72rem;padding:.2rem .6rem;border-radius:2rem;background:var(--tag-bg);border:1px solid var(--border);color:var(--muted)}
+
+/* PORTFOLIO — creative grid */
+.port-badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.8rem}
+.pbadge{font-size:.72rem;padding:.2rem .6rem;border-radius:2rem;background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.25);color:#a09cf7}
+.port-body h3{font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.port-body p{font-size:.85rem;color:#b0b4c8;margin-bottom:.8rem}
+.port-detail{font-size:.83rem;color:#b0b4c8}
+.port-detail summary{cursor:pointer;color:var(--accent);font-weight:600;margin-bottom:.5rem;list-style:none}
+.port-detail summary::before{content:'▸ '}
+details[open] summary::before{content:'▾ '}
+.port-detail ul{padding-right:1.1rem;margin-top:.4rem}
+.port-detail ul li{margin-bottom:.3rem}
+.port-results{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0}
+.p-result-item{background:rgba(0,212,170,.08);border:1px solid rgba(0,212,170,.2);border-radius:.5rem;padding:.4rem .7rem;text-align:center}
+.p-result-num{display:block;font-size:1rem;font-weight:800;color:var(--accent2)}
+.p-result-item span:last-child{font-size:.7rem;color:var(--muted)}
+.port-tech{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.si{font-size:.72rem;padding:.2rem .6rem;border-radius:2rem;background:var(--tag-bg);border:1px solid var(--border);color:var(--muted)}
+
+/* EDUCATION */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;opacity:0;transform:translateY(20px);transition:all .5s}
+.edu-card.show{opacity:1;transform:none}
+.edu-icon{font-size:1.8rem}
+.edu-card h4{font-size:.95rem;font-weight:700;margin-bottom:.2rem}
+.edu-field{font-size:.8rem;color:var(--accent);margin-bottom:.2rem}
+.edu-uni{font-size:.8rem;color:var(--muted)}
+.edu-year{font-size:.75rem;color:var(--accent2);margin-top:.3rem}
+
+/* CONTACT */
+.contact-section{padding:6rem 0;text-align:center;background:var(--dark2)}
+.contact-section h2{font-size:1.8rem;font-weight:800;margin-bottom:.8rem}
+.contact-section p{color:var(--muted);margin-bottom:2rem;font-size:.95rem}
+.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem}
+.c-link{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;border:1px solid var(--border);border-radius:.6rem;color:var(--text);text-decoration:none;font-size:.9rem;transition:all .2s}
+.c-link:hover{border-color:var(--accent);color:var(--accent)}
+
+footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+/*$*/
+.pf-counter-wrap{display:flex;flex-direction:column;gap:.9rem;align-items:flex-end}
+.pf-tab[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){
+  .pf-card,.pf-names{animation:none}
+  .pf-tile img,.pf-tile video{transition:none}
+}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(20px);transition:all .5s}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .profile-card{display:none}
+  .stop-spacer:nth-child(odd),.stop-spacer:nth-child(even){padding:0;flex-direction:column}
+  .stop-dot-wrap{display:none}
+  .journey-svg{display:none}
+}
+/* Portfolio Slider */
+.port-slider {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.port-slide {
+  display: none;
+  width: 100%;
+  animation: fadeSlide .4s ease;
+}
+
+.port-slide.active {
+  display: block;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.port-nav {
+  position: absolute;
+  right: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+}
+
+.port-nav-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all .2s;
+}
+
+.port-nav-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.port-nav-btn:disabled { opacity: .3; cursor: default; }
+
+.port-nav-dots { display: flex; flex-direction: column; gap: .4rem; }
+
+.port-nav-dot {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: background .2s;
+  border: none;
+  padding: 0;
+}
+
+.port-nav-dot.active { background: var(--accent); }
+
+@media (max-width: 768px) {
+  .port-nav {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .port-nav-dots { flex-direction: row; }
+}
+/* اضافه کردن به CSS موجود */
+.seo-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skills-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.skill-cat:not(.full) {
+  /* already 1fr each — no change needed */
+}
+.skill-cat.full {
+  grid-column: 1 / -1;
+}
+.skills-grid-tri {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+}
+.skills-grid-tri .skill-cat {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 900px) {
+  .skills-grid-tri { grid-template-columns: 1fr; }
+}
+.seo-col-title {
+  font-size: .78rem;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: .6rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--border);
+}
+@media (max-width: 768px) {
+  .seo-grid { grid-template-columns: 1fr; }
+}
+.hero-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-icon {
+  font-size: 1rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  flex-shrink: 0;
+  min-width: 70px;
+}
+
+.info-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: auto;
+  color: #fff;
+}
+.about { position: relative; padding: 60px 20px; overflow: hidden; }
+.about-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(108,99,255,.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,99,180,.1) 0%, transparent 50%);
+  animation: meshMove 8s ease-in-out infinite alternate;
+}
+@keyframes meshMove {
+  0%   { opacity: .8; transform: scale(1); }
+  100% { opacity: 1;  transform: scale(1.05); }
+}
+
+.terminal { background:#0d0d0d; border:1px solid rgba(255,255,255,.1); border-radius:.8rem; padding:1rem; font-family:monospace; width:320px; }
+.t-bar { display:flex; gap:.4rem; margin-bottom:.8rem; }
+.t-bar span { width:10px; height:10px; border-radius:50%; background:#ff5f57; }
+.t-bar span:nth-child(2) { background:#febc2e; }
+.t-bar span:nth-child(3) { background:#28c840; }
+.t-line { color:#a0f0a0; font-size:.85rem; white-space:nowrap; overflow:hidden; width:0; border-right:2px solid #a0f0a0; animation: typing 1.5s steps(40) forwards; }
+.t-line:nth-child(2) { animation-delay:1.8s; }
+.t-line:nth-child(3) { animation-delay:3.6s; }
+@keyframes typing { to { width:100%; } }
+/* ── Nebula integration patch ── */
+#nebulaCanvas { z-index: 0 !important; }
+
+body > *:not(#nebulaCanvas):not(.pf-lightbox) { position: relative; z-index: 1; }
+
+.journey-section,
+.contact-section { background: rgba(17, 19, 24, 0.35) !important; }
+
+.port-gallery { background: rgba(10, 10, 18, 0.28) !important; }
+
+.port-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  place-content: center;
+}
+
+.port-img.active {
+  display: grid;
+}
+.no-js .reveal,
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skills complementary tags */
+.skill-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.skill-extra .tag {
+  margin: 0;
+}
+
+/* AI skill card */
+.skill-cat.ai-skill {
+  grid-column: 1 / -1;
+}
+
+.ai-skill-text {
+  color: #b0b4c8;
+  font-size: .88rem;
+  line-height: 1.9;
+}
+
+/* WORKFLOW */
+.workflow-section {
+  padding: 6rem 0;
+  background: rgba(17,19,24,.35);
+}
+
+.workflow-intro {
+  max-width: 850px;
+  margin: -1.5rem auto 3rem;
+  color: #b0b4c8;
+  font-size: .92rem;
+  line-height: 2;
+  text-align: center;
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1.25rem;
+}
+
+.workflow-card {
+  position: relative;
+  min-height: 210px;
+  padding: 1.5rem;
+  background: rgba(22,24,31,.55);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: .8rem;
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.06);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform .35s ease, border-color .35s ease, opacity .5s ease;
+}
+
+.workflow-card.show {
+  opacity: 1;
+  transform: none;
+}
+
+.workflow-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108,99,255,.45);
+}
+
+.workflow-number {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.workflow-card h3 {
+  margin-bottom: .65rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.workflow-card p {
+  color: #b0b4c8;
+  font-size: .84rem;
+  line-height: 1.9;
+}
+
+@media (max-width: 900px) {
+  .workflow-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-card {
+    min-height: auto;
+  }
+
+  .workflow-intro {
+    text-align: right;
+  }
+}
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --bg:#0a0a0f;
+  --bg-soft:#111219;
+  --card:#14151d;
+  --card-hi:#191a24;
+  --border:#212330;
+  --border-soft:rgba(255,255,255,.06);
+  --accent:#6c63ff;        /* WordPress */
+  --accent-soft:rgba(108,99,255,.14);
+  --accent2:#00d4aa;       /* general success / secondary */
+  --accent2-soft:rgba(0,212,170,.14);
+  --accent3:#ffb020;       /* Theme & Plugin */
+  --accent3-soft:rgba(255,176,32,.14);
+  --accent4:#4ea1ff;       /* Frontend */
+  --accent4-soft:rgba(78,161,255,.14);
+  --accent5:#ff6fae;       /* AI Prototype */
+  --accent5-soft:rgba(255,111,174,.14);
+  --text:#eceefa;
+  --muted:#83879e;
+  --muted-dim:#565a72;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;
+  line-height:1.7;
+  overflow-x:clip;
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms !important; transition-duration:.01ms !important;}
+}
+.container{max-width:1240px;margin:0 auto;padding:0 2rem}
+::selection{background:var(--accent);color:#fff}
+
+/* ============================================================
+   PORTFOLIO SECTION
+   ============================================================ */
+.portfolio{
+  position:relative;
+  padding:6rem 0 5rem;
+  background:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(108,99,255,.10), transparent 60%),
+    radial-gradient(50rem 34rem at -5% 110%, rgba(0,212,170,.07), transparent 60%),
+    var(--bg);
+}
+
+/* --- Header --- */
+.pf-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:2rem;
+  margin-bottom:1.6rem;
+  flex-wrap:wrap;
+}
+.pf-eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  color:var(--accent2);
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  margin-bottom:1rem;
+}
+.pf-eyebrow::before{content:'';width:26px;height:1px;background:var(--accent2)}
+.pf-head h2{font-size:clamp(1.9rem,4.4vw,3.1rem);font-weight:800;letter-spacing:-.01em}
+.pf-head p{color:var(--muted);font-size:.95rem;max-width:380px}
+.pf-counter{
+  display:flex;align-items:center;gap:.9rem;
+  font-variant-numeric:tabular-nums;
+  color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;
+}
+.pf-counter .now{color:var(--text);font-size:1.05rem}
+.pf-counter .bar{width:70px;height:2px;background:var(--border);position:relative;border-radius:2px;overflow:hidden}
+.pf-counter .bar i{position:absolute;inset:0;width:25%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .5s cubic-bezier(.65,0,.35,1)}
+
+/* --- Process note --- */
+.pf-process{
+  display:flex;gap:.9rem;align-items:flex-start;
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--border-soft);
+  border-radius:1rem;
+  padding:1rem 1.2rem;
+  margin-bottom:2.2rem;
+  max-width:900px;
+}
+.pf-process .dot{
+  flex-shrink:0;width:8px;height:8px;border-radius:50%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  margin-top:.5rem;
+}
+.pf-process p{font-size:.86rem;color:#b3b7cc;line-height:1.9}
+.pf-process b{color:var(--text);font-weight:700}
+
+/* --- Category tabs --- */
+.pf-tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.2rem}
+.pf-tab{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.55rem 1.1rem;border-radius:2rem;
+  border:1px solid var(--border);background:var(--card);
+  color:var(--muted);font-size:.82rem;font-weight:600;
+  cursor:pointer;transition:all .2s;
+}
+.pf-tab i{width:7px;height:7px;border-radius:50%;background:var(--muted-dim);transition:.2s}
+.pf-tab span{opacity:.55;font-size:.72rem;font-variant-numeric:tabular-nums}
+.pf-tab:hover{color:var(--text);border-color:var(--muted-dim)}
+.pf-tab.active{color:var(--text);border-color:transparent}
+.pf-tab.active[data-filter="all"]{background:linear-gradient(90deg,var(--accent-soft),var(--accent2-soft));border-color:rgba(108,99,255,.35)}
+.pf-tab.active[data-filter="wordpress"]{background:var(--accent-soft);border-color:rgba(108,99,255,.4)}
+.pf-tab.active[data-filter="wordpress"] i{background:var(--accent)}
+.pf-tab.active[data-filter="theme"]{background:var(--accent3-soft);border-color:rgba(255,176,32,.4)}
+.pf-tab.active[data-filter="theme"] i{background:var(--accent3)}
+.pf-tab.active[data-filter="frontend"]{background:var(--accent4-soft);border-color:rgba(78,161,255,.4)}
+.pf-tab.active[data-filter="frontend"] i{background:var(--accent4)}
+
+/* --- Project name row --- */
+.pf-names-hint{
+  font-size:.76rem;color:var(--muted-dim);margin-bottom:.7rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.pf-names{
+  display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem;
+  animation:pfNamesIn .35s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes pfNamesIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.pf-name{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.5rem .95rem;border-radius:.85rem;
+  border:1px solid var(--border);background:rgba(255,255,255,.02);
+  color:var(--muted);font-size:.79rem;font-weight:600;
+  cursor:pointer;transition:transform .2s,color .2s,border-color .2s,background .2s;
+}
+.pf-name .num{opacity:.45;font-size:.7rem;font-variant-numeric:tabular-nums}
+.pf-name:hover{color:var(--text);border-color:var(--muted-dim);transform:translateY(-2px)}
+.pf-name.active{
+  color:var(--text);background:var(--card-hi);
+  border-color:rgba(108,99,255,.45);
+  box-shadow:0 0 0 1px rgba(108,99,255,.25),0 8px 24px -12px rgba(108,99,255,.55);
+}
+.pf-name:focus-visible,.pf-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* --- Project card --- */
+.pf-stage{position:relative}
+.pf-card{
+  position:relative;
+  background:linear-gradient(180deg,var(--card-hi),var(--card));
+  border:1px solid var(--border);border-radius:1.6rem;
+  padding:clamp(1.6rem,3vw,3rem);overflow:hidden;
+  transition:border-color .3s,box-shadow .3s,transform .3s;
+  animation:pfCardIn .45s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes pfCardIn{from{opacity:0;transform:translateY(14px) scale(.99)}to{opacity:1;transform:none}}
+.pf-card::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  opacity:0;transition:opacity .3s;
+  background:radial-gradient(120% 80% at 50% 0%,rgba(108,99,255,.10),transparent 60%);
+}
+.pf-card:hover{border-color:var(--muted-dim);transform:translateY(-3px)}
+.pf-card:hover::after{opacity:1}
+.pf-card[data-cat="wordpress"]:hover{box-shadow:0 24px 60px -30px rgba(108,99,255,.5)}
+.pf-card[data-cat="theme"]:hover{box-shadow:0 24px 60px -30px rgba(255,176,32,.45)}
+.pf-card[data-cat="frontend"]:hover{box-shadow:0 24px 60px -30px rgba(78,161,255,.45)}
+
+/* --- In-card project pagination (top-left, under the ghost number) --- */
+.pf-card-dots{
+  position:absolute;top:1.15rem;left:1.15rem;z-index:6;
+  display:flex;align-items:center;gap:.4rem;
+  padding:.4rem .6rem;border-radius:2rem;
+  background:rgba(10,10,18,.6);backdrop-filter:blur(8px);
+  border:1px solid var(--border);
+}
+.pf-card-dot{
+  width:7px;height:7px;padding:0;border:none;border-radius:50%;
+  background:var(--muted-dim);cursor:pointer;transition:.2s;
+}
+.pf-card-dot:hover{background:var(--muted);transform:scale(1.25)}
+.pf-card-dot.active{width:20px;border-radius:2rem;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+
+/* --- Media viewer --- */
+.pf-media{
+  position:relative;margin:1.6rem 0 1rem;border-radius:1.1rem;overflow:hidden;
+  border:1px solid var(--border);background:transparent;aspect-ratio:16/9;
+}
+.pf-media img,.pf-media video{width:100%;height:100%;object-fit:cover;display:block}
+.pf-media .zoom{
+  position:absolute;bottom:.8rem;left:.8rem;
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.45rem .8rem;border-radius:2rem;border:1px solid var(--border);
+  background:rgba(10,10,18,.6);backdrop-filter:blur(8px);
+  color:var(--text);font-size:.74rem;font-weight:600;cursor:pointer;
+}
+.pf-media .zoom:hover{border-color:var(--accent)}
+.pf-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid var(--border);background:rgba(10,10,18,.6);
+  backdrop-filter:blur(8px);color:var(--text);
+  font-size:1rem;cursor:pointer;transition:.2s;
+}
+.pf-arrow:hover{background:var(--accent);border-color:transparent}
+.pf-arrow.prev{right:.7rem}
+.pf-arrow.next{left:.7rem}
+.pf-mlabel{font-size:.76rem;color:var(--muted);margin-bottom:1.2rem}
+
+/* --- Thumbs --- */
+.pf-thumbs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.pf-thumb{
+  width:74px;height:46px;border-radius:.55rem;overflow:hidden;padding:0;
+  border:1px solid var(--border);background:#0a0a12;cursor:pointer;
+  opacity:.55;transition:.2s;position:relative;
+}
+.pf-thumb img{width:100%;height:100%;object-fit:cover}
+.pf-thumb:hover{opacity:.85}
+.pf-thumb.active{opacity:1;border-color:var(--accent)}
+.pf-thumb .vid{position:absolute;inset:0;display:grid;place-items:center;font-size:.8rem;background:rgba(0,0,0,.35)}
+
+/* --- Lightbox --- */
+.pf-lb{
+  position:fixed;inset:0;z-index:999;display:none;
+  background:rgba(6,6,12,.94);backdrop-filter:blur(14px);
+}
+.pf-lb.open{display:grid;grid-template-rows:auto 1fr auto;gap:.8rem;padding:1rem}
+.pf-lb-top{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.pf-lb-title{font-size:.82rem;color:var(--muted)}
+.pf-lb-close{
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--border);
+  background:var(--card);color:var(--text);font-size:1.1rem;cursor:pointer;
+}
+.pf-lb-close:hover{border-color:var(--accent)}
+.pf-lb-body{position:relative;display:grid;place-items:center;min-height:0}
+.pf-lb-body img,.pf-lb-body video{max-width:100%;max-height:100%;border-radius:.8rem;object-fit:contain}
+.pf-lb-thumbs{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
+@media (max-width:640px){
+  .pf-card-dots{top:.7rem;left:.7rem}
+  .pf-thumb{width:60px;height:38px}
+}
+@media (prefers-reduced-motion:reduce){
+  .pf-card,.pf-names{animation:none}
+  .pf-card:hover,.pf-name:hover{transform:none}
+}
+
+
+/* --- Project card --- */
+.pf-card{
+  position:relative;
+  background:linear-gradient(180deg, var(--card-hi), var(--card));
+  border:1px solid var(--border);
+  border-radius:1.6rem;
+  padding:clamp(1.6rem,3vw,3rem);
+  overflow:hidden;
+}
+.pf-ghost-num{
+  position:absolute;top:-2.4rem;left:-1rem;
+  font-size:clamp(6rem,14vw,11rem);
+  font-weight:800;line-height:1;color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.09);
+  user-select:none;pointer-events:none;letter-spacing:-.04em;
+}
+.pf-top{
+  position:relative;
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:1.5rem;flex-wrap:wrap;margin-bottom:1.7rem;
+}
+.pf-title-block{max-width:660px}
+.pf-tag-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem;flex-wrap:wrap}
+.pf-cat{
+  font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  padding:.32rem .8rem;border-radius:2rem;
+  background:var(--accent-soft);color:#a09cf7;border:1px solid rgba(108,99,255,.28);
+}
+.pf-cat.theme{background:var(--accent3-soft);color:var(--accent3);border-color:rgba(255,176,32,.3)}
+.pf-cat.frontend{background:var(--accent4-soft);color:var(--accent4);border-color:rgba(78,161,255,.3)}
+.pf-cat.ai{background:var(--accent5-soft);color:var(--accent5);border-color:rgba(255,111,174,.3)}
+.pf-role{font-size:.72rem;font-weight:600;padding:.32rem .8rem;border-radius:2rem;background:rgba(255,255,255,.03);color:var(--muted);border:1px solid var(--border-soft)}
+.pf-year{color:var(--muted-dim);font-size:.78rem;font-weight:600}
+.pf-title-block h3{font-size:clamp(1.4rem,2.6vw,2.1rem);font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em}
+.pf-title-block p{color:#b3b7cc;font-size:.92rem;max-width:56ch}
+.pf-live{
+  display:inline-flex;align-items:center;gap:.5rem;
+  border:1px solid var(--border);color:var(--text);background:rgba(255,255,255,.02);
+  padding:.65rem 1.3rem;border-radius:2rem;font-size:.8rem;font-weight:600;
+  text-decoration:none;white-space:nowrap;transition:border-color .2s, background .2s, transform .2s;
+}
+.pf-live:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
+.pf-live svg{width:14px;height:14px;flex-shrink:0}
+
+/* --- Results / tools strip --- */
+.pf-results{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.6rem}
+.pf-result{background:rgba(255,255,255,.02);border:1px solid var(--border-soft);border-radius:.7rem;padding:.55rem .9rem;min-width:100px}
+.pf-result b{display:block;font-size:1rem;font-weight:800;background:linear-gradient(90deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pf-result span{font-size:.68rem;color:var(--muted)}
+
+.pf-tools{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.6rem}
+.pf-tool{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.74rem;font-weight:600;
+  padding:.4rem .8rem;border-radius:.6rem;
+  background:var(--accent5-soft);color:#ffb6d8;border:1px solid rgba(255,111,174,.25);
+}
+.pf-tool.ai-model{background:rgba(255,255,255,.03);color:var(--muted);border-color:var(--border-soft)}
+
+/* --- Media layouts --- */
+.pf-media{position:relative}
+
+/* filmstrip: 4 vertical screenshots, horizontal scroll */
+.pf-media.layout-filmstrip{
+  display:flex;gap:.7rem;overflow-x:auto;padding-bottom:.3rem;scrollbar-width:thin;
+}
+.pf-media.layout-filmstrip::-webkit-scrollbar{height:5px}
+.pf-media.layout-filmstrip::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.pf-media.layout-filmstrip .pf-tile{flex:0 0 auto;width:clamp(150px,20vw,210px);aspect-ratio:9/16}
+
+/* single vertical (plugin dashboard) */
+.pf-media.layout-single{display:flex;justify-content:center}
+.pf-media.layout-single .pf-tile{width:clamp(220px,32vw,300px);aspect-ratio:9/16}
+
+/* duo: video + one vertical image (Next.js) */
+.pf-media.layout-duo{display:grid;grid-template-columns:1.5fr 1fr;gap:.8rem;height:clamp(260px,32vw,360px)}
+.pf-media.layout-duo .pf-tile:first-child{height:100%}
+.pf-media.layout-duo .pf-tile:last-child{height:100%}
+
+/* single wide video (AI prototypes) */
+.pf-media.layout-video .pf-tile{width:100%;aspect-ratio:16/9}
+
+/* trio: three equal videos side by side */
+.pf-media.layout-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}
+.pf-media.layout-trio .pf-tile{aspect-ratio:16/9}
+@media(max-width:700px){
+  .pf-media.layout-trio{grid-template-columns:1fr}
+}
+
+.pf-tile{
+  position:relative;border-radius:1.1rem;overflow:hidden;cursor:pointer;
+  background:transparent;border:1px solid var(--border-soft);
+}
+.pf-tile img,.pf-tile video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.pf-tile:hover img,.pf-tile:hover video{transform:scale(1.06)}
+.pf-tile:hover{border-color:rgba(108,99,255,.4)}
+.pf-tile .pf-tile-veil{
+  position:absolute;inset:0;background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,.6));
+  opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:.7rem;
+}
+.pf-tile:hover .pf-tile-veil{opacity:1}
+.pf-tile-label{color:#fff;font-size:.7rem;font-weight:600;opacity:.92}
+.pf-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(10,10,15,.55);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;pointer-events:none;
+}
+.pf-play svg{width:16px;height:16px;fill:#fff;margin-right:-2px}
+
+.pf-tech{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.4rem}
+.pf-si{font-size:.72rem;padding:.28rem .7rem;border-radius:2rem;background:var(--bg-soft);border:1px solid var(--border);color:var(--muted)}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.pf-lightbox{
+  position:fixed;inset:0;z-index:1000;background:rgba(6,6,10,.96);backdrop-filter:blur(10px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:1.2rem 1rem 1rem;opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.pf-lightbox.open{opacity:1;pointer-events:auto}
+.pf-lb-close{
+  position:absolute;top:1.4rem;left:1.4rem;width:2.6rem;height:2.6rem;border-radius:50%;
+  background:var(--card);border:1px solid var(--border);color:var(--text);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;
+}
+.pf-lb-close:hover{border-color:var(--accent)}
+.pf-lb-meta{color:var(--muted);font-size:.82rem;margin-bottom:.6rem;text-align:center}
+.pf-lb-meta b{color:var(--text);font-weight:700}
+.pf-lb-stage{position:relative;width:100%;max-width:1400px;flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.pf-lb-stage img,.pf-lb-stage video{max-width:96vw;max-height:88vh;border-radius:1rem;border:1px solid var(--border);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.pf-lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);width:3rem;height:3rem;border-radius:50%;
+  background:rgba(20,21,29,.8);border:1px solid var(--border);color:#fff;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
+.pf-lb-nav:hover{border-color:var(--accent);background:var(--accent-soft)}
+.pf-lb-nav.prev{right:-.5rem}
+.pf-lb-nav.next{left:-.5rem}
+@media(min-width:640px){.pf-lb-nav.prev{right:1rem}.pf-lb-nav.next{left:1rem}}
+.pf-lb-nav svg{width:18px;height:18px}
+
+.pf-filmstrip{display:flex;gap:.6rem;margin-top:1.2rem;max-width:100%;overflow-x:auto;padding:.4rem;scrollbar-width:thin}
+.pf-filmstrip::-webkit-scrollbar{height:4px}
+.pf-filmstrip::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.pf-film-item{flex:0 0 auto;width:68px;height:48px;border-radius:.5rem;overflow:hidden;border:2px solid transparent;cursor:pointer;position:relative;opacity:.55;transition:opacity .2s, border-color .2s}
+.pf-film-item.active{opacity:1;border-color:var(--accent)}
+.pf-film-item img,.pf-film-item video{width:100%;height:100%;object-fit:cover;display:block}
+.pf-film-item .mini-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25)}
+.pf-film-item .mini-play svg{width:10px;height:10px;fill:#fff}
+
+@media(max-width:860px){
+  .pf-media.layout-duo{grid-template-columns:1fr;height:auto}
+  .pf-media.layout-duo .pf-tile{height:220px}
+  .pf-ghost-num{display:none}
+}
+@media(max-width:520px){
+  .pf-top{flex-direction:column;align-items:stretch}
+  .pf-live{align-self:flex-start}
+}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.show{opacity:1;transform:none}
+
+</style>
+</head>
+<body>
+
+<canvas id="nebulaCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;"></canvas>
+
+
+<script>
+document.documentElement.classList.remove('no-js');
+(function () {
+  const canvas = document.getElementById('nebulaCanvas');
+  const gl = canvas.getContext('webgl');
+  if (!gl) return;
+
+  const vert = `
+    attribute vec2 a_pos;
+    void main() { gl_Position = vec4(a_pos, 0, 1); }
+  `;
+
+  const frag = `
+    precision mediump float;
+    uniform vec2 iResolution;
+    uniform float iTime;
+    uniform vec2 iMouse;
+
+    mat2 rot(float a){ float c=cos(a),s=sin(a); return mat2(c,-s,s,c); }
+
+    float map(vec3 p) {
+      p.xz *= rot(iTime * 0.4);
+      p.xy *= rot(iTime * 0.3);
+      vec3 q = p * 2.0 + iTime;
+      return length(p + vec3(sin(iTime * 0.7)))
+           * log(length(p) + 1.0)
+           + sin(q.x + sin(q.z + sin(q.y))) * 0.5 - 1.0;
+    }
+
+    void main() {
+      vec2 uv = (gl_FragCoord.xy / min(iResolution.x, iResolution.y)) - vec2(0.9, 0.5);
+      uv.x += 0.4;
+
+      // subtle mouse parallax
+      vec2 mouse = (iMouse / iResolution) - 0.5;
+      uv += mouse * 0.08;
+
+      vec3 col = vec3(0.0);
+      float d = 2.5;
+
+      for (int i = 0; i < 6; i++) {
+        vec3 p = vec3(0, 0, 5) + normalize(vec3(uv, -1)) * d;
+        float rz = map(p);
+        float f  = clamp((rz - map(p + 0.1)) * 0.5, -0.1, 1.0);
+        vec3 base = vec3(0.08, 0.2, 0.45) + vec3(4.5, 2.0, 5.5) * f;
+        col = col * base + smoothstep(2.5, 0.0, rz) * 0.7 * base;
+        d += min(rz, 1.0);
+      }
+
+      // vignette
+      float dist = length((gl_FragCoord.xy / iResolution) - 0.5);
+      col *= 1.0 - smoothstep(0.3, 0.85, dist) * 0.75;
+
+      gl_FragColor = vec4(col, 1.0);
+    }
+  `;
+
+  function compile(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+
+  const prog = gl.createProgram();
+  gl.attachShader(prog, compile(gl.VERTEX_SHADER, vert));
+  gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, frag));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, 'a_pos');
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+  const uRes   = gl.getUniformLocation(prog, 'iResolution');
+  const uTime  = gl.getUniformLocation(prog, 'iTime');
+  const uMouse = gl.getUniformLocation(prog, 'iMouse');
+
+  let mouse = [0, 0];
+  window.addEventListener('mousemove', e => { mouse = [e.clientX, window.innerHeight - e.clientY]; });
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const start = performance.now();
+  (function loop() {
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uTime, (performance.now() - start) / 1000);
+    gl.uniform2f(uMouse, mouse[0], mouse[1]);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(loop);
+  })();
+})();
+</script>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="nav-logo">{ dev }</div>
+    <ul class="nav-links">
+      <li><a href="#skills">تخصص‌ها</a></li>
+      <li><a href="#journey">تجربه</a></li>
+      <li><a href="#portfolio">پروژه‌ها</a></li>
+      <li><a href="#education">تحصیلات</a></li>
+      <li><a href="#contact">تماس</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">در دسترس برای همکاری حرفه‌ای</div>
+
+        <h1>
+          توسعه‌دهنده <span>وردپرس</span>، فرانت‌اند و
+          <span>راهکارهای سئو نتیجه‌محور</span>
+        </h1>
+
+        <div class="hero-sub">
+           Frontend Engineer | React, Next.js, TypeScript
+        </div>
+        <div class="bio">
+          Frontend Engineer با بیش از ۵ سال تجربه در طراحی و توسعه رابط‌های کاربری
+          مقیاس‌پذیر، داشبوردهای داده‌محور و رابط‌های محصولات مبتنی بر
+          <strong>AI</strong> (چت و Streaming) با
+          <strong>React</strong>، <strong>Next.js</strong> و
+          <strong>TypeScript</strong>.
+          <br><br>
+          در پروژه‌های واقعی، معماری کامپوننت‌محور و قابل‌توسعه طراحی کرده‌ام؛
+          Stateهای پیچیده را با <strong>Redux Toolkit</strong> و
+          <strong>Context API</strong> مدیریت می‌کنم، فرم‌های حساس را با
+          <strong>React Hook Form</strong> و <strong>Zod</strong> اعتبارسنجی می‌کنم و
+          کیفیت کد را با <strong>Vitest</strong>،
+          <strong>React Testing Library</strong> و <strong>MSW</strong> تضمین می‌کنم.
+          نتیجه ملموس این رویکرد، بهبود امتیاز <strong>Lighthouse</strong> یک محصول
+          فروشگاهی از <strong>۲۸ به ۸۷</strong> از طریق کاهش Re-render،
+          Code Splitting و بهینه‌سازی Asset بوده است.
+          <br><br>
+          مسیر کاری‌ام از وردپرس و سئوی فنی آغاز شد — پایه‌ای که امروز به من دید
+          عمیقی نسبت به <strong>Performance</strong>، <strong>Core Web Vitals</strong>
+          و SEO فنی می‌دهد. تمرکز فعلی من ساخت فرانت‌اندهای مدرن، تست‌پذیر و
+          قابل نگهداری برای محصولات جدی و در حال رشد است؛ از تبدیل دقیق طرح‌های
+          <strong>Figma</strong> تا تحویل کد آماده Production.
+        </div>
+        <div class="tags">
+          <span class="tag tool">WordPress</span>
+          <span class="tag tool">WooCommerce</span>
+          <span class="tag lang">PHP OOP</span>
+          <span class="tag tool">Plugin Development</span>
+          <span class="tag">Technical SEO</span>
+          <span class="tag">Core Web Vitals</span>
+          <span class="tag lang">JavaScript</span>
+          <span class="tag tool">Git / GitHub</span>
+          <span class="tag">AI-assisted Workflow</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary">مشاهده پروژه‌ها</a>
+          <a href="#contact" class="btn btn-outline">تماس با من</a>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar">👩🏻‍💻</div>
+        <div class="hero-name">محدثه رحمانیان</div>
+        <div class="profile-name">Frontend Engineer | React, Next.js, TypeScript</div>
+        <div class="profile-role">
+          WordPress Developer &amp; SEO Specialist
+        </div>
+
+        <div class="hero-info-list">
+          <div class="info-item">
+            <span class="info-icon">👤</span>
+            <span class="info-label">سن</span>
+            <span class="info-value">25 سال</span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">💼</span>
+            <span class="info-label">تجربه</span>
+            <span class="info-value">5 سال</span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <span class="info-label">موقعیت</span>
+            <span class="info-value">تهران، ایران</span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🚀</span>
+            <span class="info-label">پروژه‌ها</span>
+            <span class="info-value">15+ پروژه</span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🎓</span>
+            <span class="info-label">تحصیلات</span>
+            <span class="info-value">کارشناسی ارشد تجارت الکترونیک</span>
+          </div>
+        </div>
+
+        <div class="avail">
+          <span class="avail-dot"></span>
+          آماده همکاری
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="sec-title reveal">
+      <span class="sec-tag">تخصص‌ها</span>
+      <h2>حوزه‌های تخصصی</h2>
+      <p>مهندسی فرانت‌اند مدرن با تمرکز بر کیفیت، تست‌پذیری و Performance</p>
+    </div>
+
+    <div class="skills-grid skills-grid-tri">
+      <div class="skill-cat">
+        <div class="skill-cat-title">🎯 مهارت‌های اصلی</div>
+        <div class="skill-extra">
+          <span class="tag">React.js</span>
+          <span class="tag">Next.js (App Router)</span>
+          <span class="tag lang">TypeScript</span>
+          <span class="tag lang">JavaScript (ES6+)</span>
+          <span class="tag lang">HTML5</span>
+          <span class="tag lang">CSS3 / SCSS</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Responsive Design</span>
+          <span class="tag">Redux Toolkit</span>
+          <span class="tag">Context API</span>
+          <span class="tag">React Query</span>
+          <span class="tag">REST API</span>
+          <span class="tag tool">Git / GitHub</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-title">🛠 کیفیت، تست و بهینه‌سازی</div>
+        <div class="skill-extra">
+          <span class="tag tool">React Hook Form</span>
+          <span class="tag tool">Zod</span>
+          <span class="tag tool">Vitest</span>
+          <span class="tag tool">React Testing Library</span>
+          <span class="tag tool">MSW</span>
+          <span class="tag">Core Web Vitals</span>
+          <span class="tag tool">Lighthouse</span>
+          <span class="tag">Performance Optimization</span>
+          <span class="tag">Frontend Security (XSS)</span>
+          <span class="tag tool">Figma → Production UI</span>
+        </div>
+        <div class="skill-extra">
+          <span class="tag tool">Cursor</span>
+          <span class="tag tool">GitHub Copilot</span>
+          <span class="tag tool">Claude</span>
+          <span class="tag">Prompt Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-title">🌱 تجربه تکمیلی</div>
+        <div class="skill-extra">
+          <span class="tag">Three.js</span>
+          <span class="tag">GSAP</span>
+          <span class="tag">Framer Motion</span>
+          <span class="tag">PWA</span>
+          <span class="tag tool">Docker Basics</span>
+          <span class="tag">Web Workers</span>
+        </div>
+        <div class="skill-extra">
+          <span class="tag tool">WordPress / WooCommerce</span>
+          <span class="tag lang">PHP (OOP)</span>
+          <span class="tag tool">WP REST API</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Technical SEO</span>
+          <span class="tag">Schema Markup</span>
+          <span class="tag tool">Google Search Console</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:2rem">
+      🎓 گواهینامه سئو و دیجیتال مارکتینگ — دانشگاه صنعتی شریف
+    </p>
+  </div>
+</section>
+
+<!-- WORKFLOW -->
+<section class="workflow-section" id="workflow">
+  <div class="container">
+    <div class="sec-title reveal">
+      <span class="sec-tag">روش همکاری</span>
+      <h2>رویکرد من در اجرای پروژه</h2>
+      <p>از شناخت مسئله تا توسعه، بهینه‌سازی و رشد</p>
+    </div>
+
+    <div class="workflow-intro reveal">
+      اجرای پروژه برای من صرفاً ساخت یک وب‌سایت زیبا نیست. ابتدا هدف،
+      مخاطب، بودجه و نیازهای واقعی کسب‌وکار را بررسی می‌کنم؛ سپس راهکاری
+      انتخاب می‌شود که از نظر فنی قابل اتکا، برای کاربر قابل استفاده و
+      برای کسب‌وکار نتیجه‌ساز باشد.
+    </div>
+
+    <div class="workflow-grid">
+      <article class="workflow-card reveal">
+        <span class="workflow-number">مرحله ۰۱</span>
+        <h3>نیازسنجی و تحلیل</h3>
+        <p>
+          شناخت هدف، مخاطب، محدودیت‌ها، امکانات موردنیاز و معیارهای
+          موفقیت برای مشخص‌شدن مسیر واقعی پروژه.
+        </p>
+      </article>
+
+      <article class="workflow-card reveal">
+        <span class="workflow-number">مرحله ۰۲</span>
+        <h3>طراحی مسیر کاربر</h3>
+        <p>
+          بررسی ساختار صفحات، CTAها، تجربه موبایل، هویت بصری و مسیر
+          حرکت کاربر از ورود تا اقدام نهایی.
+        </p>
+      </article>
+
+      <article class="workflow-card reveal">
+        <span class="workflow-number">مرحله ۰۳</span>
+        <h3>انتخاب راهکار فنی</h3>
+        <p>
+          انتخاب میان شخصی‌سازی حرفه‌ای، قالب اختصاصی، فروشگاه،
+          افزونه سفارشی یا ترکیبی از راهکارهای متناسب با پروژه.
+        </p>
+      </article>
+
+      <article class="workflow-card reveal">
+        <span class="workflow-number">مرحله ۰۴</span>
+        <h3>توسعه و بهینه‌سازی</h3>
+        <p>
+          پیاده‌سازی ریسپانسیو، سریع، امن، سئوپذیر و قابل توسعه با
+          تمرکز بر کیفیت کد و Core Web Vitals.
+        </p>
+      </article>
+
+      <article class="workflow-card reveal">
+        <span class="workflow-number">مرحله ۰۵</span>
+        <h3>بازبینی و اصلاحات</h3>
+        <p>
+          بررسی عملکرد، تجربه کاربری و خروجی نهایی، دریافت بازخورد و
+          اعمال اصلاحات مرحله‌ای پیش از تحویل.
+        </p>
+      </article>
+
+      <article class="workflow-card reveal">
+        <span class="workflow-number">مرحله ۰۶</span>
+        <h3>رشد و پشتیبانی</h3>
+        <p>
+          پشتیبانی فنی، مدیریت سایت، بهینه‌سازی سرعت، بررسی سئو و
+          بهبود مسیر تبدیل بازدیدکننده به مشتری.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- JOURNEY -->
+<section class="journey-section" id="journey">
+  <div class="container">
+    <div class="sec-title reveal">
+      <span class="sec-tag">تجربه</span>
+      <h2>مسیر رشد تا مهندسی سنیور فرانت‌اند</h2>
+      <p>از مالکیت پروژه‌های واقعی تا تصمیم‌های معماری و محصولات مقیاس‌پذیر</p>
+    </div>
+    <div id="journeyWrapper">
+      <svg class="journey-svg" id="journeySvg" preserveAspectRatio="none">
+        <path id="jBg"/><path id="jFill"/>
+      </svg>
+      <div class="stops-list">
+
+        <div class="stop-spacer">
+          <div class="stop-dot-wrap"><div class="stop-dot" id="dot-0"></div></div>
+          <div class="stop reveal" id="stop-0">
+            <div class="stop-year">۱۳۹۸ — نقطه شروع</div>
+            <h3>مالکیت کامل پروژه از روز اول</h3>
+            <div class="stop-role">Web Developer — فریلنسر</div>
+            <p>برخلاف مسیرهای سازمانی، از اولین پروژه مسئولیت کامل نتیجه با من بود: تحلیل نیاز مشتری، معماری، پیاده‌سازی و تحویل. این مالکیت انتها-به-انتها پایه ذهنیت مهندسی‌ای شد که امروز با آن کار می‌کنم.</p>
+            <ul>
+              <li>تسلط بر بنیان‌های وب — HTML، CSS، جاوااسکریپت و PHP — در پروژه‌های واقعی با مشتری واقعی</li>
+              <li>راه‌اندازی گردش کار حرفه‌ای با Git و محیط‌های توسعه محلی</li>
+              <li>اولین مواجهه با بهینه‌سازی عملکرد — شروع تخصصی که بعدها متمایزکننده شد</li>
+            </ul>
+            <div class="stop-tags"><span class="stop-tag">PHP</span><span class="stop-tag">JavaScript</span><span class="stop-tag">WordPress</span><span class="stop-tag">Git</span></div>
+          </div>
+        </div>
+
+        <div class="stop-spacer">
+          <div class="stop-dot-wrap"><div class="stop-dot" id="dot-1"></div></div>
+          <div class="stop reveal" id="stop-1">
+            <div class="stop-year">۱۴۰۰ — ۱۴۰۲</div>
+            <h3>از کدنویسی تا نتیجه کسب‌وکار</h3>
+            <div class="stop-role">Full-Stack Developer — راه‌حل‌های سفارشی</div>
+            <p>مرحله‌ای که یاد گرفتم موفقیت کد با معیارهای کسب‌وکار سنجیده می‌شود، نه فقط کیفیت فنی. توسعه سیستم‌های سفارشی با PHP شیءگرا و WP REST API و پاسخ‌گویی مستقیم به ازای هر عدد.</p>
+            <ul>
+              <li>طراحی و توسعه ۳ افزونه سفارشی PHP OOP — سیستم رزرو آنلاین با صفر تداخل در ۶ ماه اول بهره‌برداری</li>
+              <li>افزایش ۶۰٪ فروش آنلاین در ۳ ماه اول برای فروشگاه محصولات</li>
+              <li>بهینه‌سازی Core Web Vitals — کاهش LCP به زیر ۲.۵ ثانیه و رتبه Top 3 کلمات کلیدی هدف در ۴ ماه</li>
+            </ul>
+            <div class="stop-tags"><span class="stop-tag">PHP OOP</span><span class="stop-tag">REST API</span><span class="stop-tag">Core Web Vitals</span><span class="stop-tag">Business Impact</span></div>
+          </div>
+        </div>
+
+        <div class="stop-spacer">
+          <div class="stop-dot-wrap"><div class="stop-dot" id="dot-2"></div></div>
+          <div class="stop reveal" id="stop-2">
+            <div class="stop-year">۱۴۰۳ — ۱۴۰۴ | Ariaaglass</div>
+            <h3>رهبری فنی اولین پروژه بزرگ</h3>
+            <div class="stop-role">Frontend Performance & SEO Lead</div>
+            <p>رهبری کامل بازطراحی UI/UX و استراتژی فنی برای فروشگاهی با PageSpeed زیر ۳۰. اینجا نقشم از «مجری» به «تصمیم‌گیرنده فنی» تغییر کرد: اولویت‌بندی بدهی فنی، تعریف معیارهای موفقیت و هدایت پروژه تا نتیجه.</p>
+            <ul>
+              <li>افزایش امتیاز PageSpeed از ۲۸ به ۸۷ — WebP، Lazy Loading و Critical CSS</li>
+              <li>رشد ۱۸۰٪ ترافیک ارگانیک در ۶ ماه</li>
+              <li>کاهش ۴۰٪ نرخ پرش با بازطراحی موبایل‌اول و کاهش TTFB به زیر ۲۰۰ms با Caching چندلایه</li>
+            </ul>
+            <div class="stop-tags"><span class="stop-tag">Technical Leadership</span><span class="stop-tag">Core Web Vitals</span><span class="stop-tag">UX Redesign</span><span class="stop-tag">Caching</span></div>
+          </div>
+        </div>
+
+        <div class="stop-spacer">
+          <div class="stop-dot-wrap"><div class="stop-dot" id="dot-3"></div></div>
+          <div class="stop reveal" id="stop-3">
+            <div class="stop-year">۱۴۰۳ — ۱۴۰۴</div>
+            <h3>گذار معمارانه به پشته مدرن</h3>
+            <div class="stop-role">Frontend Developer — React, Next.js, TypeScript</div>
+            <p>مهاجرت به React و TypeScript نه به‌عنوان یادگیری یک ابزار جدید، بلکه به‌عنوان یک تصمیم معماری: کامپوننت‌محوری، تایپ‌سیفتی و فرهنگ تست‌نویسی — استانداردهایی که از آن پس در همه پروژه‌ها غیرقابل مذاکره‌اند.</p>
+            <ul>
+              <li>معماری مدیریت وضعیت پیچیده و جریان‌های داده ناهمگام با Redux Toolkit و React Query</li>
+              <li>پوشش تست واحد و یکپارچه‌سازی جریان‌های حیاتی کاربر با Vitest و RTL؛ شبیه‌سازی API با MSW</li>
+              <li>مهندسی عملکرد سیستماتیک: کاهش re-render، Code Splitting و بهینه‌سازی دارایی‌ها</li>
+              <li>فرم‌های طرح‌واره‌محور با React Hook Form و Zod؛ تبدیل طراحی‌های Figma به UI آماده تولید</li>
+            </ul>
+            <div class="stop-tags"><span class="stop-tag">React</span><span class="stop-tag">TypeScript</span><span class="stop-tag">Redux Toolkit</span><span class="stop-tag">Vitest</span><span class="stop-tag">MSW</span></div>
+          </div>
+        </div>
+
+        <div class="stop-spacer">
+          <div class="stop-dot-wrap"><div class="stop-dot" id="dot-4"></div></div>
+          <div class="stop reveal" id="stop-4">
+            <div class="stop-year">۱۴۰۵ — محصولات شاخص</div>
+            <h3>طراحی و ساخت محصول کامل</h3>
+            <div class="stop-role">Frontend Engineer — معماری تا تحویل</div>
+            <p>سطحی که تفاوت سنیور را مشخص می‌کند: نه پیاده‌سازی فیچر، بلکه طراحی معماری قابل تست و مقیاس‌پذیر برای کل محصول — از داشبورد تصمیم‌یار سازمانی تا پلتفرم فروش اشتراکی محصولات دیجیتال و ابزارهای AI.</p>
+            <ul>
+              <li><strong>DecisionOps:</strong> معماری داشبورد تعاملی مدیریت وظایف و تصمیم‌گیری — React، TypeScript، Redux Toolkit با پوشش تست کامل (Vitest، RTL، MSW)</li>
+              <li><strong>XGame:</strong> پلتفرم E-commerce اشتراکی با Next.js و Tailwind — رابط‌های حرکت‌محور با Three.js و GSAP و مسیرهای کاربری تبدیل‌محور</li>
+              <li><strong>WP Performance Pulse:</strong> معماری افزونه مانیتورینگ RUM و Core Web Vitals با داشبورد تشخیصی و گزارش‌گیری خودکار</li>
+            </ul>
+            <div class="stop-tags"><span class="stop-tag">Next.js</span><span class="stop-tag">TypeScript</span><span class="stop-tag">Scalable Architecture</span><span class="stop-tag">Three.js</span><span class="stop-tag">GSAP</span></div>
+          </div>
+        </div>
+
+        <div class="stop-spacer">
+          <div class="stop-dot-wrap"><div class="stop-dot" id="dot-5"></div></div>
+          <div class="stop reveal" id="stop-5">
+            <div class="stop-year">اکنون</div>
+            <h3>مهندس سنیور فرانت‌اند</h3>
+            <div class="stop-role">Senior Frontend Engineer — در کنار تحصیلات تکمیلی (دانشگاه علم و صنعت)</div>
+            <p>امروز کارم فراتر از پیاده‌سازی است: تعریف استاندارد کیفیت، انتخاب معماری متناسب با مقیاس محصول و مالکیت فیچر از ایده تا Production. تمرکز فعلی بر رابط‌های محصولات AI — تجربه‌های streaming و chat — و داشبوردهای داده‌محور است.</p>
+            <ul>
+              <li>توسعه UIهای هوش مصنوعی با پشتیبانی از پاسخ‌های streaming</li>
+              <li>تعهد به دسترسی‌پذیری (a11y)، تست خودکار و CI/CD به‌عنوان استاندارد پیش‌فرض هر پروژه</li>
+              <li>آماده همکاری با تیم‌های بین‌المللی و cross-functional با مالکیت کامل فیچر</li>
+            </ul>
+            <div class="stop-tags"><span class="stop-tag">AI Product UI</span><span class="stop-tag">Feature Ownership</span><span class="stop-tag">a11y</span><span class="stop-tag">CI/CD</span></div>
+          </div>
+        </div>
+
+      </div><!-- stops-list -->
+    </div><!-- journeyWrapper -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PORTFOLIO
+     ============================================================ -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="pf-head reveal">
+      <div>
+        <div class="pf-eyebrow">نمونه‌کارها</div>
+        <h2>پروژه‌های منتخب</h2>
+        <p>گزیده‌ای از پروژه‌های وردپرس، سئو و طراحی تجربه کاربری — هر پروژه با گالری کامل تصاویر و ویدیو.</p>
+      </div>
+
+      <div class="pf-counter-wrap">
+        <div class="pf-counter" aria-label="پیشرفت پروژه‌ها">
+          <span class="now" id="pfNow">1</span>/<span id="pfTotal">0</span>
+          <div class="bar"><i id="pfBar"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pf-process reveal">
+      <div class="dot"></div>
+      <p><b>روند کار:</b> تحلیل نیاز و معماری اطلاعات، پیاده‌سازی سریع با ابزارهای هوش مصنوعی، و بهینه‌سازی نهایی روی Core Web Vitals و سئوی تکنیکال.</p>
+    </div>
+
+    <div class="pf-tabs" id="pfTabs" role="tablist" aria-label="فیلتر دسته‌بندی">
+      <button class="pf-tab active" type="button" role="tab" aria-selected="true" data-filter="all"><i></i>همه <span>0</span></button>
+      <button class="pf-tab" type="button" role="tab" aria-selected="false" data-filter="wordpress"><i></i>WordPress <span>0</span></button>
+      <button class="pf-tab" type="button" role="tab" aria-selected="false" data-filter="theme"><i></i>قالب اختصاصی <span>0</span></button>
+      <button class="pf-tab" type="button" role="tab" aria-selected="false" data-filter="frontend"><i></i>Frontend <span>0</span></button>
+      <button class="pf-tab" type="button" role="tab" aria-selected="false" data-filter="ai"><i></i>AI <span>0</span></button>
+    </div>
+
+    <p class="pf-names-hint" id="pfNamesHint">پروژه‌های این دسته — روی هرکدام بزنید:</p>
+    <div class="pf-names" id="pfNames" aria-label="فهرست پروژه‌ها"></div>
+
+    <div class="pf-stage" id="pfStage" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX (تنها یک نسخه) -->
+<div class="pf-lightbox" id="pfLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="pf-lb-close" id="pfLbClose" type="button" aria-label="بستن">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="pf-lb-meta"><b id="pfLbTitle"></b> — <span id="pfLbCount"></span></div>
+  <div class="pf-lb-stage" id="pfLbStage">
+    <button class="pf-lb-nav prev" id="pfLbPrev" type="button" aria-label="مدیای قبلی">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+    <button class="pf-lb-nav next" id="pfLbNext" type="button" aria-label="مدیای بعدی">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+    </button>
+  </div>
+  <div class="pf-filmstrip" id="pfFilmstrip"></div>
+</div>
+
+<!-- EDUCATION -->
+<section class="section" id="education" style="background:var(--dark2)">
+  <div class="container">
+    <div class="sec-title reveal">
+      <span class="sec-tag">تحصیلات</span>
+      <h2> پایه‌های آکادمیک</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <h4>کارشناسی ارشد تجارت الکترونیک</h4>
+          <div class="edu-field">M.Sc. E-Commerce</div>
+          <div class="edu-uni">دانشگاه علم و صنعت ایران</div>
+          <div class="edu-year">در حال تحصیل</div>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-icon">💻</div>
+        <div>
+          <h4>کارشناسی مهندسی کامپیوتر</h4>
+          <div class="edu-field">B.Sc. Computer Engineering</div>
+          <div class="edu-uni">دانشگاه آزاد اسلامی</div>
+          <div class="edu-year">فارغ‌التحصیل </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <span class="sec-tag">تماس</span>
+    <h2>آماده همکاری در پروژه های جدید هستم</h2>
+    <p>راه های ارتباطی جهت همکاری، بررسی پروژه یا فرصت شغلی</p>
+    <div class="contact-links">
+      <a href="mailto:mohaddeserahmanian@email.com" class="c-link">📧 ایمیل</a>
+      <a href="https://github.com/mohadrh" class="c-link" target="_blank">🐙 GitHub</a>
+      <a href="tel:+989125941042" class="c-link">📱 تلفن</a>
+      <a href="https://t.me/mohadrhh" class="c-link" target="_blank">✈️ تلگرام</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    ساخته شده با ❤️ — توسعه‌دهنده وردپرس و متخصص سئو
+  </div>
+</footer>
+
+
+<script>
+// Intersection Observer — reveal + skill bars
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('show');
+    e.target.querySelectorAll('.sbar-fill').forEach(b => {
+      b.style.width = b.dataset.w + '%';
+    });
+    io.unobserve(e.target);
+  });
+}, {threshold: 0.15});
+
+document.querySelectorAll(
+  '.reveal, .skill-cat, .stop, .port-card, .edu-card, .workflow-card'
+).forEach(el => io.observe(el));
+
+
+// Journey S-curve scroll animation
+const stops = document.querySelectorAll('.stop');
+const dots = document.querySelectorAll('.stop-dot');
+const svg = document.getElementById('journeySvg');
+const wrapper = document.getElementById('journeyWrapper');
+
+function buildSPath() {
+  const ww = wrapper.offsetWidth;
+  const wh = wrapper.offsetHeight;
+  const cx = ww / 2;
+  const seg = wh / (stops.length - 1 || 1);
+  let d = `M ${cx} 0`;
+  for (let i = 1; i < stops.length; i++) {
+    const y0 = (i - 1) * seg, y1 = i * seg;
+    const dir = i % 2 === 1 ? 1 : -1;
+    const ox = dir * ww * 0.22;
+    d += ` C ${cx + ox} ${y0 + seg * 0.4}, ${cx + ox} ${y0 + seg * 0.6}, ${cx} ${y1}`;
+  }
+  return d;
+}
+
+function initSvg() {
+  if (!svg) return;
+  const d = buildSPath();
+  document.getElementById('jBg').setAttribute('d', d);
+  const fill = document.getElementById('jFill');
+  fill.setAttribute('d', d);
+  const total = fill.getTotalLength();
+  fill.style.strokeDasharray = total;
+  fill.style.strokeDashoffset = total;
+  fill._total = total;
+}
+
+function updateJourney() {
+  const fill = document.getElementById('jFill');
+  if (!fill || !fill._total) return;
+  const wRect = wrapper.getBoundingClientRect();
+  const wh = window.innerHeight;
+  const progress = Math.min(1, Math.max(0, (-wRect.top + wh * 0.6) / wRect.height));
+  fill.style.strokeDashoffset = fill._total * (1 - progress);
+
+  stops.forEach((stop, i) => {
+    const rect = stop.getBoundingClientRect();
+    const active = rect.top < wh * 0.7;
+    if (dots[i]) dots[i].classList.toggle('lit', active);
+  });
+}
+
+window.addEventListener('scroll', updateJourney, {passive: true});
+window.addEventListener('resize', () => { initSvg(); updateJourney(); });
+initSvg();
+updateJourney();
+
+/* ============================================================
+   PROJECT DATA
+   ------------------------------------------------------------
+   All media paths are RELATIVE — see the folder map in the
+   accompanying README for exactly where to drop your files.
+   type: "image" | "video"   orientation only matters for CSS.
+   ============================================================ */
+
+
+  /* ---------------- WORDPRESS (client / real sites) ---------------- */
+
+const PROJECTS = [
+
+  /* 1. VaultX — Gaming Marketplace */
+  {
+    category:"frontend", categoryLabel:"فرانت‌اند", role:"محصول شخصی", year:"۱۴۰۴",
+    title:"فروشگاه اکانت AI و گیم",
+    desc:"مارکت مدرن گیمینگ ساخته‌شده با Next.js؛ فروش محصولات دیجیتال، اکانت بازی، گیفت‌کارت و اشتراک در رابطی سریع، ریسپانسیو و با هویت بصری تیره مخصوص گیمینگ.",
+    liveUrl:null,
+    results:null,
+    tech:["Next.js","React","TypeScript","Tailwind CSS","Framer Motion"],
+    mediaLayout:"filmstrip",
+    media:[
+      {type:"image", src:"assets/portfolio/frontend/vaultx/1.png",},
+      {type:"video", src:"assets/portfolio/frontend/vaultx/demo.mp4", poster:"assets/portfolio/wordpress/vaultx/poster.png", label:"دمو ویدیویی"}    
+    ]
+  },
+
+  /* 2. DecisionOps */
+  {
+    category:"frontend", categoryLabel:"فرانت‌اند", role:"محصول شخصی", year:"۱۴۰۴",
+    title:"DecisionOps — کانسپت داشبورد هوش تجاری",
+    desc:"کانسپت داشبورد هوش تجاری واکنش‌گرا برای نمایش شاخص‌های کلیدی (KPI)، گزارش‌های عملیاتی و داده‌های تحلیلی در رابطی تمیز، خواناتی و کاربرپسند.",
+    liveUrl:null,
+    results:null,
+    tech:["React","TypeScript","JavaScript","Chart.js","Responsive Design","Dashboard UI","Data Visualization"],
+    mediaLayout:"filmstrip",
+    media:[
+      {type:"video", src:"assets/portfolio/frontend/DecisionOps/demo.mp4", poster:"assets/portfolio/frontend/DecisionOps/poster.png", label:"دمو ویدیویی"}    
+    ]
+  },
+
+  /* 4. WP Performance Pulse */
+  {
+    category:"theme", categoryLabel:"افزونه وردپرس", role:"محصول شخصی", year:"۱۴۰۳",
+    title:"WP Performance Pulse — افزونه مانیتورینگ عملکرد",
+    desc:"افزونه اختصاصی برای پایش و بهینه‌سازی عملکرد سایت از داخل پیشخوان وردپرس؛ گزارش سرعت، کش، کوئری‌های سنگین و پیشنهاد بهینه‌سازی، با معماری PHP OOP.",
+    liveUrl:null,
+    results:null,
+    tech:["PHP OOP","WP REST API","Custom Admin UI","Performance Monitoring"],
+    mediaLayout:"filmstrip",
+    media:[
+      {type:"image", src:"assets/portfolio/theme/plugin-dashboard/1.png", label:"داشبورد افزونه"},
+    ]
+  },
+
+  /* 5. Lily Gold Gallery */
+  {
+    category:"wordpress", categoryLabel:"وردپرس", role:"دمو شخصی", year:"۱۴۰۳",
+    title:"Lily Gold Gallery — فروشگاه طلا و زیورآلات",
+    desc:"تجربه فروشگاهی لوکس با تمرکز بر اعتماد، جزئیات محصول، تجربه موبایل و مسیر خرید ساده.",
+    liveUrl:null,
+    results:[["Luxury","هویت بصری"],["Mobile","First UX"],["Shop","Ready"],["Trust","Focused"]],
+    tech:["WooCommerce","Elementor","Responsive UI","Product UX"],
+    mediaLayout:"filmstrip",
+    media:[
+      {type:"image", src:"assets/portfolio/wordpress/lily-gold/1.png", label:"ویترین محصولات"},
+      {type:"image", src:"assets/portfolio/wordpress/lily-gold/2.png", label:"جزئیات محصول"},
+      {type:"image", src:"assets/portfolio/wordpress/lily-gold/3.png", label:"سبد خرید"},
+      {type:"image", src:"assets/portfolio/wordpress/lily-gold/4.png", label:"نسخه موبایل"}
+    ]
+  },
+
+  /* 6. XGame */
+  {
+    category:"wordpress", categoryLabel:"وردپرس", role:"دمو شخصی", year:"۱۴۰۳",
+    title:"Xgame - خرید اکانت گیم",
+    desc:"[یک خط توضیح درباره این پروژه بنویس — موضوع سایت، چالش اصلی و چیزی که روش کار کردی]",
+    liveUrl:null,
+    results:null,
+    tech:["WordPress"],
+    mediaLayout:"filmstrip",
+    media:[
+      {type:"image", src:"assets/portfolio/wordpress/xgame/1.png", label:"صفحه اصلی"},
+      {type:"image", src:"assets/portfolio/wordpress/xgame/2.png", label:"فروشگاه"},
+      {type:"image", src:"assets/portfolio/wordpress/xgame/3.png", label:"حساب کاربری"}
+    ]
+  },
+
+  /* 7. Ariaaglass */
+  {
+    category:"wordpress", categoryLabel:"وردپرس", role:"کارفرما", year:"۱۴۰۱",
+    title:"Ariaaglass — فروشگاه آنلاین شیشه و آینه",
+    desc:"بازطراحی تجربه کاربری، بهینه‌سازی سرعت و اجرای استراتژی سئو برای یک فروشگاه تخصصی شیشه و آینه.",
+    liveUrl:null,
+    results:[["۲۸→۸۷","PageSpeed"],["+۱۸۰٪","ترافیک ارگانیک"],["-۴۰٪","نرخ پرش"],["۲۰۰ms","TTFB"]],
+    tech:["WooCommerce","Redis","WebP","Critical CSS","Schema"],
+    mediaLayout:"filmstrip",
+    media:[
+      {type:"image", src:"assets/portfolio/wordpress/ariaaglass/1.png", label:"صفحه اصلی"},
+      {type:"image", src:"assets/portfolio/wordpress/ariaaglass/2.png", label:"صفحه محصول"},
+      {type:"image", src:"assets/portfolio/wordpress/ariaaglass/3.png", label:"سبد خرید"},
+      {type:"image", src:"assets/portfolio/wordpress/ariaaglass/4.png", label:"نسخه موبایل"}
+    ]
+  },
+
+  /* 8. Melika Esmaeili */
+  {
+    category:"wordpress", categoryLabel:"وردپرس", role:"کارفرما", year:"۱۴۰۲",
+    title:"Melika Esmaeili — کلینیک زیبایی",
+    desc:"سیستم رزرو آنلاین با قوانین کسب‌وکار خاص، فروشگاه محصولات و مدیریت تقویم متخصصان در یک تجربه یکپارچه.",
+    liveUrl:null,
+    results:[["صفر","تداخل رزرو"],["+۶۰٪","فروش آنلاین"],["#۱","Local Search"],["۳","افزونه سفارشی"]],
+    tech:["PHP OOP","WP REST API","Bookly","ACF","Local SEO"],
+    mediaLayout:"filmstrip",
+    media:[
+      {type:"image", src:"assets/portfolio/wordpress/melika-clinic/1.png", label:"1"},
+      {type:"image", src:"assets/portfolio/wordpress/melika-clinic/2.png", label:"2"},
+      {type:"image", src:"assets/portfolio/wordpress/melika-clinic/3.png", label:"3"},
+      {type:"video", src:"assets/portfolio/wordpress/melika-clinic/demo.mp4", poster:"assets/portfolio/wordpress/melika-clinic/poster.png", label:"دمو ویدیویی"}
+    ]
+  },
+
+  /* 9. Nejatkhahlaw */
+  {
+    category:"wordpress", categoryLabel:"وردپرس", role:"کارفرما", year:"۱۴۰۳",
+    title:"Nejatkhahlaw — دفتر حقوقی",
+    desc:"طراحی سایتی که اعتماد و اقتدار حقوقی را منتقل می‌کند؛ ترکیب طراحی رسمی، سئو محلی و امنیت داده.",
+    liveUrl:null,
+    results:[["Top 3","رتبه کلمات کلیدی"],["+۹۰٪","ترافیک ارگانیک"],["۴ ماه","زمان نتیجه"],["۱۰۰٪","امنیت فرم‌ها"]],
+    tech:["Custom Theme","Schema.org","Local SEO","reCAPTCHA","Wordfence"],
+    mediaLayout:"filmstrip",
+    media:[
+      {type:"image", src:"assets/portfolio/wordpress/nejatkhahlaw/1.png", label:"صفحه اصلی"},
+      {type:"image", src:"assets/portfolio/wordpress/nejatkhahlaw/2.png", label:"صفحه خدمات"},
+      {type:"image", src:"assets/portfolio/wordpress/nejatkhahlaw/3.png", label:"بلاگ حقوقی"},
+      {type:"image", src:"assets/portfolio/wordpress/nejatkhahlaw/4.png", label:"نسخه موبایل"}
+    ]
+  },
+
+ ];
+
+/* ===================== PORTFOLIO ENGINE ===================== */
+(() => {
+  const stage   = document.getElementById('pfStage');
+  if (!stage || typeof PROJECTS === 'undefined') return;
+
+  const tabsEl  = document.getElementById('pfTabs');
+  const namesEl = document.getElementById('pfNames');
+  const namesHintEl = document.getElementById('pfNamesHint');
+  const nowEl   = document.getElementById('pfNow');
+  const totalEl = document.getElementById('pfTotal');
+  const barEl   = document.getElementById('pfBar');
+
+  const lb      = document.getElementById('pfLightbox');
+  const lbStage = document.getElementById('pfLbStage');
+  const lbFilm  = document.getElementById('pfFilmstrip');
+  const lbTitle = document.getElementById('pfLbTitle');
+  const lbCount = document.getElementById('pfLbCount');
+
+  let filter = 'all';
+  let list   = [];
+  let index  = 0;
+
+  let lbProject = null;
+  let lbIndex   = 0;
+
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
+    ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+
+  const svgPlay = () => '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+
+  /* ---------- filtering ---------- */
+  const apply = () => {
+    list  = filter === 'all' ? PROJECTS.slice() : PROJECTS.filter(p => p.category === filter);
+    index = 0;
+    renderNames();
+    renderStage();
+  };
+
+  const syncTabCounts = () => {
+    tabsEl.querySelectorAll('.pf-tab').forEach(tab => {
+      const f = tab.dataset.filter;
+      const n = f === 'all' ? PROJECTS.length : PROJECTS.filter(p => p.category === f).length;
+      const badge = tab.querySelector('span');
+      if (badge) badge.textContent = n;
+      tab.hidden = n === 0 && f !== 'all';
+    });
+  };
+
+  /* ---------- names (project pills under the active category) ---------- */
+  function renderNames() {
+    if (namesHintEl) namesHintEl.hidden = list.length <= 1;
+    namesEl.innerHTML = list.map((p, i) =>
+      `<button class="pf-name${i === index ? ' active' : ''}" type="button" data-i="${i}">
+         <span class="num">${String(i + 1).padStart(2, '0')}</span>${esc(p.title)}
+       </button>`).join('');
+  }
+
+  /* ---------- in-card pagination dots (top-left, under the ghost number) ---------- */
+  function cardDotsHTML() {
+    if (list.length <= 1) return '';
+    return `<div class="pf-card-dots" role="tablist" aria-label="پیمایش پروژه‌ها">${
+      list.map((p, i) => `<button class="pf-card-dot${i === index ? ' active' : ''}" type="button" data-i="${i}" aria-label="${esc(p.title)}"></button>`).join('')
+    }</div>`;
+  }
+
+  /* ---------- media tiles ---------- */
+  function tileHTML(m, i) {
+    const isVideo = m.type === 'video';
+    const inner = isVideo
+      ? `<video src="${esc(m.src)}" ${m.poster ? `poster="${esc(m.poster)}"` : ''} muted playsinline preload="metadata"></video>
+         <div class="pf-play">${svgPlay()}</div>`
+      : `<img src="${esc(m.src)}" alt="${esc(m.label || '')}" loading="lazy" decoding="async">`;
+    return `<div class="pf-tile" data-m="${i}" role="button" tabindex="0"
+                 aria-label="${esc(m.label || 'مشاهده مدیا')}">
+              ${inner}
+              <div class="pf-tile-veil"><span class="pf-tile-label">${esc(m.label || '')}</span></div>
+            </div>`;
+  }
+
+  /* ---------- stage ---------- */
+  function renderStage() {
+    if (!list.length) {
+      stage.innerHTML = `<div class="pf-card"><p style="color:var(--muted)">پروژه‌ای در این دسته ثبت نشده است.</p></div>`;
+      updateCounter();
+      return;
+    }
+
+    const p     = list[index];
+    const media = p.media || [];
+    const layout = p.mediaLayout || (media.length === 1 ? 'single' : media.length === 2 ? 'duo'
+                  : media.length === 3 ? 'trio' : 'filmstrip');
+
+    stage.innerHTML = `
+      <article class="pf-card" data-cat="${esc(p.category)}">
+        <div class="pf-ghost-num">${String(index + 1).padStart(2, '0')}</div>
+        ${cardDotsHTML()}
+        <div class="pf-top">
+          <div class="pf-title-block">
+            <div class="pf-tag-row">
+              <span class="pf-cat ${esc(p.category)}">${esc(p.categoryLabel || p.category)}</span>
+              ${p.role ? `<span class="pf-role">${esc(p.role)}</span>` : ''}
+              ${p.year ? `<span class="pf-year">${esc(p.year)}</span>` : ''}
+            </div>
+            <h3>${esc(p.title)}</h3>
+            <p>${esc(p.desc || '')}</p>
+          </div>
+          ${p.liveUrl ? `<a class="pf-live" href="${esc(p.liveUrl)}" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              مشاهده زنده</a>` : ''}
+        </div>
+
+        ${(p.results || []).length ? `<div class="pf-results">${p.results.map(r =>
+            `<div class="pf-result"><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>`).join('')}</div>` : ''}
+
+        ${(p.tools || []).length ? `<div class="pf-tools">${p.tools.map(t =>
+            `<span class="pf-tool${/gpt|claude|gemini|copilot|v0|cursor/i.test(t) ? ' ai-model' : ''}">${esc(t)}</span>`).join('')}</div>` : ''}
+
+        <div class="pf-media layout-${esc(layout)}">${media.map(tileHTML).join('')}</div>
+
+        ${(p.tech || []).length ? `<div class="pf-tech">${p.tech.map(t =>
+            `<span class="pf-si">${esc(t)}</span>`).join('')}</div>` : ''}
+      </article>`;
+
+    stage.querySelectorAll('.pf-card-dot').forEach(dot => {
+      dot.addEventListener('click', () => goTo(+dot.dataset.i));
+    });
+
+    stage.querySelectorAll('.pf-tile').forEach(tile => {
+      const open = () => openLightbox(index, +tile.dataset.m);
+      tile.addEventListener('click', open);
+      tile.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+      });
+    });
+
+    updateCounter();
+  }
+
+  function updateCounter() {
+    nowEl.textContent   = list.length ? index + 1 : 0;
+    totalEl.textContent = list.length;
+    barEl.style.width   = list.length ? `${((index + 1) / list.length) * 100}%` : '0%';
+  }
+
+  function goTo(i) {
+    if (!list.length) return;
+    index = (i + list.length) % list.length;
+    renderNames();
+    renderStage();
+  }
+
+  /* ---------- events ---------- */
+  tabsEl.addEventListener('click', e => {
+    const tab = e.target.closest('.pf-tab');
+    if (!tab) return;
+    tabsEl.querySelectorAll('.pf-tab').forEach(t => {
+      const on = t === tab;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on);
+    });
+    filter = tab.dataset.filter;
+    apply();
+  });
+
+  namesEl.addEventListener('click', e => {
+    const btn = e.target.closest('.pf-name');
+    if (btn) goTo(+btn.dataset.i);
+  });
+
+  // swipe (RTL-aware: جهت طبیعی برای کاربر فارسی)
+  let sx = 0, sy = 0;
+  stage.addEventListener('touchstart', e => {
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+  }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - sx;
+    const dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) goTo(index + (dx > 0 ? 1 : -1));
+  }, { passive: true });
+
+  /* ---------- lightbox ---------- */
+  function renderStageMedia() {
+    const m = lbProject.media[lbIndex];
+    const old = lbStage.querySelector('.pf-lb-media');
+    if (old) old.remove();
+    const isVideo = m.type === 'video';
+    const node = document.createElement(isVideo ? 'video' : 'img');
+    node.className = 'pf-lb-media';
+    node.src = m.src;
+    if (isVideo) { node.controls = true; node.autoplay = true; node.playsInline = true; node.poster = m.poster || ''; }
+    else { node.alt = m.label || ''; }
+    lbStage.insertBefore(node, document.getElementById('pfLbNext'));
+    lbCount.textContent = `${lbIndex + 1} از ${lbProject.media.length}`;
+  }
+
+  function renderFilmstrip() {
+    lbFilm.innerHTML = '';
+    lbProject.media.forEach((m, idx) => {
+      const item = document.createElement('div');
+      item.className = 'pf-film-item' + (idx === lbIndex ? ' active' : '');
+      const isVideo = m.type === 'video';
+      item.innerHTML = `<img src="${esc(isVideo ? (m.poster || '') : m.src)}" alt="">` +
+                       (isVideo ? `<div class="mini-play">${svgPlay()}</div>` : '');
+      item.addEventListener('click', () => { lbIndex = idx; renderStageMedia(); renderFilmstrip(); });
+      lbFilm.appendChild(item);
+    });
+  }
+
+  function openLightbox(projectIdx, mediaIdx) {
+    lbProject = list[projectIdx];
+    if (!lbProject || !(lbProject.media || []).length) return;
+    lbIndex = mediaIdx || 0;
+    lbTitle.textContent = lbProject.title;
+    renderStageMedia();
+    renderFilmstrip();
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('pfLbClose').focus();
+  }
+
+  function closeLightbox() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    const v = lbStage.querySelector('video');
+    if (v) v.pause();
+    const old = lbStage.querySelector('.pf-lb-media');
+    if (old) old.remove();
+  }
+
+  function lbStep(dir) {
+    const n = lbProject.media.length;
+    lbIndex = (lbIndex + dir + n) % n;
+    renderStageMedia();
+    renderFilmstrip();
+  }
+
+  document.getElementById('pfLbClose').addEventListener('click', closeLightbox);
+  document.getElementById('pfLbPrev').addEventListener('click', () => lbStep(-1));
+  document.getElementById('pfLbNext').addEventListener('click', () => lbStep(1));
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+
+  document.addEventListener('keydown', e => {
+    if (lb.classList.contains('open')) {
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowRight') lbStep(-1);   // RTL: راست = قبلی
+      if (e.key === 'ArrowLeft')  lbStep(1);
+      return;
+    }
+    if (document.activeElement?.closest('#portfolio')) {
+      if (e.key === 'ArrowRight') goTo(index - 1);
+      if (e.key === 'ArrowLeft')  goTo(index + 1);
+    }
+  });
+
+  /* ---------- init ---------- */
+  syncTabCounts();
+  apply();
+})();
+</script>
+</body>
+</html>
